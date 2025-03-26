@@ -1,0 +1,26 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JFrame;
+public class Texteditor extends JFrame implements ActionListener{
+ JTextArea textArea;
+ JScrollPane scrollPane;
+ Texteditor(){
+   this.setDefaultCloseOperation(JFrame.Exit_ON_CLOSE);
+   this.setTitle("Text Editor");
+   this.setsize(500,500);
+  this.setLayout(new FlowLayout());
+ this.setLocationRelativeTo(null);
+
+
+  textArea = new JTextArea();
+ textArea.setLineWrap(true);
+ textArea.setWrapStyleWord(true);
+ textArea.setFont(new Font("Arial",Font.PLAIN,20));
+
+ scrollPane = new JScrollPane(textArea);
+scrollPane.setPreferredSize(new Dimension(450,450));
+scrollPane
+
+ this.add(scrollPane);
+ this.setVisible(true);
+}
